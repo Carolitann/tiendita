@@ -1,19 +1,39 @@
+/* import  List from './components/list/list'; */
 import './App.css';
 import Catalogo from './components/catalogo/catalogo';
-import ItemCard from './components/itemListContainer/itemList';
+import ClickableComponent from './components/clickable/clickable';
+/* import ItemCard from './components/itemListContainer/itemList'; */
 import NavBar from './components/navbar/navbar';
-import logo from '../src/logo.svg';
+import { createMuiTheme } from '@mui/material';
+import { green, orange } from '@mui/material/colors';
+import { ThemeProvider } from '@emotion/react';
+
+
+const theme = createMuiTheme ({
+  palette: {
+    primary: {
+      main: orange [800]
+    },
+    secondary: {
+      main: green [400]
+    }
+  }
+})
 
 
 function App() {
   return (
-    <div className="App">
-      <NavBar/>
-      <Catalogo/>
-      <ItemCard/>
-      <ItemCard/>
-      <ItemCard/>
-    </div>
+   <ThemeProvider theme={theme}>
+      <div className="App">
+        <NavBar/>
+        {/* <List/> */}
+        <Catalogo/>
+        <ClickableComponent themeButton/>
+        {/* <ItemCard/>
+        <ItemCard/>
+        <ItemCard/> */}
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -13,10 +13,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import CartWidget from '../cartWidget/cartWidget';
+/* import CartWidget from '../cartWidget/cartWidget'; */
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -158,8 +157,8 @@ export default function NavBar () {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" color="secondary">
+        <Toolbar >
           <IconButton
             size="large"
             edge="start"
@@ -167,9 +166,9 @@ export default function NavBar () {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MenuIcon  color="primary"/>
           </IconButton>
-          <Typography
+          <Typography color="primary"
             variant="h6"
             noWrap
             component="div"
@@ -177,9 +176,9 @@ export default function NavBar () {
           >
             Tiendita
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
+          <Search >
+            <SearchIconWrapper >
+              <SearchIcon color="primary"/>
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
@@ -188,7 +187,7 @@ export default function NavBar () {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <CartWidget/>
+             {/*  <CartWidget/> */}
             <IconButton
               size="large"
               edge="end"
@@ -198,7 +197,7 @@ export default function NavBar () {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <AccountCircle color="primary"/>
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

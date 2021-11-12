@@ -1,22 +1,36 @@
 
-const TitleComponent = ({name}) => {
+const TitleComponent = ({name, lastName}) => {
     return (
       <div>
-          <h1>Hola {name}</h1>
+          <h1>{name} {lastName}</h1>
       </div>
-     );
+    );
 }
 
 export default TitleComponent;
 
+
+//Otro forma
+
+/* const TitleComponent = ({name, onSaludar}) => {
+    return (
+      <div>
+          <h1>Hola {name}</h1>
+          <button type='button' onClick={onSaludar}>Click</button>
+      </div>
+    );
+}
+
+export default TitleComponent; */
 
 
 
 //////////////////////
 // Otra forma
 
+/* export default TitleComponent;
 
-/* export default TitleComponent;itleComponent extends Component {
+TitleComponent extends Component {
   constructor(props){
     super(props)
     this.state = {
