@@ -8,6 +8,9 @@ import { createMuiTheme } from '@mui/material';
 import { green, orange } from '@mui/material/colors';
 import { ThemeProvider } from '@emotion/react';
 import MultiActionAreaCard from './components/itemCount/itemCount';
+import ItemCount from './components/itemCount/itemCount';
+import {Icon} from '@material-ui/core';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const theme = createMuiTheme ({
@@ -21,7 +24,6 @@ const theme = createMuiTheme ({
   }
 })
 
-
 function App() {
   return (
    <ThemeProvider theme={theme}>
@@ -29,7 +31,6 @@ function App() {
         <NavBar/>
         {/* <List/> */}
         <Catalogo/>
-        <ClickableComponent themeButton/>
         <MultiActionAreaCard/>
         {/* <ItemCard/>
         <ItemCard/>

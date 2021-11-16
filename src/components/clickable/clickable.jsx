@@ -1,9 +1,9 @@
 import { useState } from "react";
 
+
 const ClickableComponent = () => {
   const [count, setCount] = useState (0);
   const [timestamp, setTimesTamps] = useState (new Date());
-
 
   function updateCount () {
     setCount(count + 1);
@@ -17,10 +17,9 @@ const ClickableComponent = () => {
 
   return (
     <div>
-      <span >Clicks: {count}. Ultimo click: {timestamp.toString()}</span>
+   {/*    <span >Clicks: {count}. Ultimo click: {timestamp.toString()}</span>
       <button type='button' onClick={updateCount}>Increment Count</button>
-      <button type='button' onClick={downdateCount}>decrease Count</button>
-
+      <button type='button' onClick={downdateCount}>decrease Count</button> */}
     </div>
   )
 }

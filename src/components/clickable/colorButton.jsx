@@ -2,7 +2,7 @@
 // import { green } from "@mui/material/colors";
 
 
-const themeButton = createMuiTheme ({
+/* const themeButton = createMuiTheme ({
   palette:{
     primary:{
       main: green[800]
@@ -10,7 +10,7 @@ const themeButton = createMuiTheme ({
   }
 })
 
-export default themeButton;
+export default themeButton; */
 
 /*
 const themeButton = createMuiTheme ({

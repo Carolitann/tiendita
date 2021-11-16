@@ -5,6 +5,9 @@ import TitleComponent from './title/title';
 const Catalogo = (props) => {
   const [name, setName] = useState('Carolina');
   const [lastName, setLastName] = useState('Noriega');
+  const theme = {
+    spacing: 8,
+  };
 
   function updateName () {
       setName('Manny');
@@ -14,7 +17,7 @@ const Catalogo = (props) => {
     return(
       <div>
           <TitleComponent name={name} lastName={lastName}/>
-          <button type='button' onClick={updateName}>Click</button>
+          <button sx={{ mb: 2 }} type='button' onClick={updateName}>Click</button>
       </div>
     );
 }
